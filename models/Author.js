@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.schema;
 
-const AuthorSchema = new Schema({
+const AuthorSchema = new mongoose.Schema({
     name: String,
     age: Number
 });
