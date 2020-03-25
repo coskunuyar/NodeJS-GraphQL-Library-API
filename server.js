@@ -6,7 +6,10 @@ const message = require('./utils/message');
 
 dotenv.config({path: './config/config.env'});
 
-mongoose.connect(process.env.DB_URI);
+mongoose.connect(process.env.DB_URI , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 mongoose.connection.once('open' , () => {
     message('Connected to database.','success');
 });
