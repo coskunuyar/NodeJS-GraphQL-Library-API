@@ -21,7 +21,6 @@ app.use(cors());
 
 const PORT = 4000 || process.env.PORT;
 
-console.log(schema);
 app.use('/graphql',graphqlHTTP({
     schema,
     graphiql: true
